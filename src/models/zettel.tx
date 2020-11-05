@@ -1,0 +1,22 @@
+Zettel:
+    "zid" "=" zid=Zid "\n"
+    "Title" title=STRING "\n"
+    "Commentaries Start"
+    	commentaries *= Zid[","]
+    "Commentaries End"
+    ztext=ZettelText+
+;
+
+ZettelText:
+	Markdown
+;
+
+Markdown:
+    "md start"
+	text=STRING
+    "md end"
+;
+
+Zid:
+    "zid" zid=STRING
+;
